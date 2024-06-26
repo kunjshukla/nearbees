@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flower Recognition</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#uploadForm").submit(function(e) {
+                e.preventDefault(); // Prevent default form submission
+
+                $("#loading").show(); // Show loading indicator (optional)
+
+                // Send AJAX request using jQuery or Fetch API
+                $.ajax({
+                    url: "/upload",
+                    type: "POST",
+                    data: new FormData(this),
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        $("#result").text(response.flower_name); // Display result
+                        $("#loading").hide(); // Hide loading indicator (optional)
+                    },
+                    error: function(error) {
+                        console.error("Error uploading file:", error);
+                        $("#result").text("An error occurred.");
+                        $("#loading").hide(); // Hide loading indicator (optional)
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Flower Recognition</h1>
+    <form id="uploadForm" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+    <p id="result"></p>
+    <p id="loading" style="display: none;">Uploading...</p>
+</body>
+</html>

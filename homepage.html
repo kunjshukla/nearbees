@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nearbees.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="header">
+        <h1>NearBees</h1>
+        <p>let's reconnect with nature ,Flower recognition system</p>
+    </div>
+        
+
+        <div class="content" style="text-align: right ;" class="inline">
+        <table>
+            <td>
+                <div class="inline">
+                    <div class="box">
+                        <img class="image" id="image"src="rose01.jpg" alt="Image 1">
+                    </div>
+                    <div class="thumbnails">
+                        <img class="thumbnail" src="rose01.jpg" alt="Thumbnail 1" onclick="changeImage('rose01.jpg')">
+                        <img class="thumbnail" src="rose02.jpg" alt="Thumbnail 2" onclick="changeImage('rose02.jpg')">
+                        <img class="thumbnail" src="sunflower01.jpg" alt="Thumbnail 3" onclick="changeImage('sunflower01.jpg')">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <h1 style="color: azure;">A brief Introduction</h1>
+                <pre>This project aims to challenge conventional perspectives on flower recognition systems, which often perceive
+                    them as complicated or inaccessible. It seeks to address issues such as lack of user-friendly interfaces and 
+                    limited functionality, recognizing that these factors hinder widespread adoption and  meaningful  engagement 
+                    with the technology. The goal of this initiative is to develop an intuitive and enjoyable flower recognition
+                    system that promotes curiosity and exploration. Additionally, it endeavours to enhance the user experience by
+                    equipping the system with advanced image recognition algorithms, thus empowering  users to  identify  flowers 
+                    with ease and sparking new interest and appreciation for the natural world.</pre>
+            </div>
+            </td>
+        </table>
+       
+        <!-- get started button code in html downloaded onlin through uiverse.io -->
+        <div class="center">
+            <button class="cssbuttons-io-button" onclick="redirectToNewPage()">
+                Get started
+                <div class="icon">
+                  <svg
+                    height="24"
+                    width="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+        </div>
+          <!-- menu bar code in html -->
+        <!-- main content and body of the website -->
+
+    </div> 
+    <div id="menu" style="text-align: center;">
+      <ul>
+        <br><br><br><br>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="upload.html">Explore</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div id="menu-btn">
+      <br><br>&#9776;</div>
+    <script src="nearbees.js"></script>
+</body>
+</html>
